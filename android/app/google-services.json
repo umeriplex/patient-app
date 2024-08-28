@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571385069355",
+    "project_id": "patient-app-44e71",
+    "storage_bucket": "patient-app-44e71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571385069355:android:fc82b4e5aa867c37cf0f6e",
+        "android_client_info": {
+          "package_name": "com.example.patient_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA--c2_PS4ansou89T31Ngi229ioFOeGIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
