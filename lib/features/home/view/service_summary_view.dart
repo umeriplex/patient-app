@@ -249,7 +249,7 @@ class _ServiceSummaryState extends State<ServiceSummary> {
             children: [
               Image.asset(AppImages.bookedCheck, height: AD.of(context).h45 * 4,),
               AD.of(context).h20.ph,
-              const Text('Booked Successful!', style: TextStyles.headline1,),
+              const Text('Booked Successful!', style: TextStyles.headline1, textAlign: TextAlign.center,),
               AD.of(context).h20.ph,
               const Text('We will give you a short call for confirmation and then we will schedule a booking call with you.', style: TextStyles.bodyText1, textAlign: TextAlign.center,),
               AD.of(context).h20.ph,

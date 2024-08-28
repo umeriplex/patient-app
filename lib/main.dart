@@ -24,24 +24,28 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Patient App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
-        useMaterial3: true,
-        bottomSheetTheme: const BottomSheetThemeData(
-          backgroundColor: AppColors.white100,
-          surfaceTintColor: AppColors.white100,
-          modalBackgroundColor: AppColors.white100,
+    final MediaQueryData data = MediaQuery.of(context);
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(textScaler: data.textScaler.scale(1) > 1.0 ? const TextScaler.linear(0.75) : const TextScaler.linear(0.85)),
+      child: GetMaterialApp(
+        title: 'Patient App',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+          useMaterial3: true,
+          bottomSheetTheme: const BottomSheetThemeData(
+            backgroundColor: AppColors.white100,
+            surfaceTintColor: AppColors.white100,
+            modalBackgroundColor: AppColors.white100,
 
 
+          ),
         ),
+        initialRoute: Names.initial,
+        getPages: AppRoutes.getPages,
+        builder: BotToastInit(),
+        navigatorObservers: [BotToastNavigatorObserver()],
       ),
-      initialRoute: Names.initial,
-      getPages: AppRoutes.getPages,
-      builder: BotToastInit(),
-      navigatorObservers: [BotToastNavigatorObserver()],
     );
   }
 }

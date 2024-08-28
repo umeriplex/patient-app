@@ -80,6 +80,8 @@ class _HomeViewState extends State<HomeView> {
                       ),
                     ),
 
+                    AD.of(context).w30.pw,
+
                     InkWell(
                       onTap: () async {
                         Future.wait([
@@ -143,10 +145,10 @@ class _HomeViewState extends State<HomeView> {
                                   ],
                                 ),
 
-                                10.0.ph,
+                                5.0.ph,
                                 const Text("Please wait for your call", style: TextStyles.subtitle2,),
 
-                                10.0.ph,
+                                5.0.ph,
                                 const Text("December 23, 2023 - 12:33 AM", style: TextStyles.subtitle1,),
                               ],
                             ),

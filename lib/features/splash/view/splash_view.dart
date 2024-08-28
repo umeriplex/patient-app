@@ -29,9 +29,9 @@ class _SplashViewState extends State<SplashView> {
             showMessage("Session Expired.");
             Get.toNamed(Names.login);
           }
-          Get.toNamed(Names.home);
+          Get.offNamed(Names.home);
         }else{
-          Get.toNamed(Names.login);
+          Get.offNamed(Names.login);
         }
       });
     });
